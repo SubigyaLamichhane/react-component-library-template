@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      font: {
+        1: {
+          size: "0.75rem",
+          lineHeight: "1rem",
+        },
+      },
       fontWeight: {
         light: "300",
         regular: "400",

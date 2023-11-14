@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 
 const Button = (props: ButtonProps) => {
-  return <button>{props.label}</button>;
+  return <button className="bg-black">{props.label}</button>;
 };
 
 export default Button;

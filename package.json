@@ -13,7 +13,11 @@
   "author": "Subigya Lamichhane",
   "license": "ISC",
   "dependencies": {
-    "react": "^18.2.0"
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "react": "^18.2.0",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",
@@ -54,5 +58,8 @@
   "types": "dist/index.d.ts",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/subigyalamichhane"
+  },
+  "resolutions": {
+    "jackspeak": "2.1.1"
   }
 }

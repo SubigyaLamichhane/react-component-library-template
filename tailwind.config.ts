@@ -15,13 +15,26 @@ const config: Config = {
     //     "2xl": "1400px",
     //   },
     // },
+    spacing: {
+      2: "8px",
+      3: "12px",
+      4: "115px",
+    },
+    fontFamily: {
+      sans: ["Inter", "sans"],
+    },
+    borderRadius: {
+      md: "4px",
+    },
     extend: {
       font: {
         1: {
-          size: "0.75rem",
-          lineHeight: "1rem",
+          size: "12px",
+          lineHeight: "16px",
+          letterSpacing: "0.0025em"
         },
       },
+
       fontWeight: {
         light: "300",
         regular: "400",
@@ -29,7 +42,7 @@ const config: Config = {
         semibold: "600",
         bold: "700",
       },
-      color: {
+      colors: {
         accents: {
           1: "#FBFDFF",
           2: "#F5FAFF",

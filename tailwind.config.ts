@@ -18,7 +18,7 @@ const config: Config = {
     spacing: {
       2: "8px",
       3: "12px",
-      4: "115px",
+      4: "16px",
     },
     fontFamily: {
       sans: ["Inter", "sans"],
@@ -27,12 +27,70 @@ const config: Config = {
       md: "4px",
     },
     extend: {
-      font: {
-        1: {
-          size: "12px",
-          lineHeight: "16px",
-          letterSpacing: "0.0025em"
-        },
+      fontSize: {
+        "1": [
+          "12px",
+          {
+            lineHeight: "16px",
+            letterSpacing: "0.0025em",
+          },
+        ],
+        "2": [
+          "14px",
+          {
+            lineHeight: "20px",
+            letterSpacing: "0em",
+          },
+        ],
+        "3": [
+          "16px",
+          {
+            lineHeight: "24px",
+            letterSpacing: "0em",
+          },
+        ],
+        "4": [
+          "18px",
+          {
+            lineHeight: "26px",
+            letterSpacing: "-0.0025em",
+          },
+        ],
+        "5": [
+          "20px",
+          {
+            lineHeight: "28px",
+            letterSpacing: "-0.005em",
+          },
+        ],
+        "6": [
+          "24px",
+          {
+            lineHeight: "30px",
+            letterSpacing: "-0.00625em",
+          },
+        ],
+        "7": [
+          "28px",
+          {
+            lineHeight: "36px",
+            letterSpacing: "-0.0075em",
+          },
+        ],
+        "8": [
+          "35px",
+          {
+            lineHeight: "40px",
+            letterSpacing: "-0.01em",
+          },
+        ],
+        "9": [
+          "60px",
+          {
+            lineHeight: "60px",
+            letterSpacing: "-0.025em",
+          },
+        ],
       },
 
       fontWeight: {
@@ -138,4 +196,5 @@ const config: Config = {
   },
   plugins: [require("tailwindcss-animate")],
 };
+
 export default config;

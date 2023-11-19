@@ -6,13 +6,13 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex text-white items-center justify-center whitespace-nowrap rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        medium: "bg-accents-9 text-white hover:bg-accents-9/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        default: "bg-accents-9 !text-white hover:bg-accents-9/90",
+        pop: "bg-accents-9 !text-white hover:bg-accents-9/90  border-blue-700 shadow-inner shadow-2xl",
+
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
@@ -21,13 +21,14 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
-        medium: "h-[32px] px-3 py-1",
-        small: "h-[24px] px-2 py-1",
-        large: "h-12 px-5 py-3",
+        small: "h-[24px] px-2 text-1",
+        medium: "h-[32px] px-3 text-2 ",
+        large: "h-[40px] px-4 text-3",
       },
     },
+
     defaultVariants: {
-      variant: "medium",
+      variant: "default",
       size: "medium",
     },
   }
@@ -41,10 +42,17 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
+    if (!size) {
+      size = "medium";
+    }
+    if (!variant) {
+      variant = "pop";
+    }
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
+        // className="font-"
         ref={ref}
         {...props}
       />

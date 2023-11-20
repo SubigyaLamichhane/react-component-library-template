@@ -45,10 +45,10 @@ export const Primary: Story = {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogTitle>Revoke access</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
+            Are you sure? This application will no longer be accessible and any
+            existing sessions will be expired.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>

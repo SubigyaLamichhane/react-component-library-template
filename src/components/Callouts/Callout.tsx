@@ -2,8 +2,23 @@ import * as React from "react";
 import "../../global.css";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
-
+import {
+  CheckCircled,
+  ExclamationTriangle,
+  InfoCircled,
+  LockClosed,
+} from "@harness-ui/icons";
 import { cn } from "../../lib/utils";
+
+const iconVariants = cva("", {
+  variants: {
+    size: {
+      small: "w-4 h-4 mr-2",
+      medium: "w-4 h-4 mr-3",
+      large: "w-4 h-4 mr-4",
+    },
+  },
+});
 
 const calloutVariants = cva(
   "inline-flex items-center font-regular justify-center whitespace-nowrap rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
@@ -35,7 +50,7 @@ export interface CalloutProps
 }
 
 const Callout = React.forwardRef<HTMLDivElement, CalloutProps>(
-  ({ className, size, colour, asChild = false, ...props }, ref) => {
+  ({ className, size, colour, asChild = false, children, ...props }, ref) => {
     if (!size) {
       size = "medium";
     }
@@ -56,7 +71,57 @@ const Callout = React.forwardRef<HTMLDivElement, CalloutProps>(
         // className="font-"
         ref={ref}
         {...props}
-      />
+      >
+        <div className="flex items-center mr-">
+          <div>
+            {
+              {
+                accents: (
+                  <InfoCircled
+                    className={cn(
+                      iconVariants({
+                        size,
+                        className,
+                      })
+                    )}
+                  />
+                ),
+                error: (
+                  <ExclamationTriangle
+                    className={cn(
+                      iconVariants({
+                        size,
+                        className,
+                      })
+                    )}
+                  />
+                ),
+                success: (
+                  <CheckCircled
+                    className={cn(
+                      iconVariants({
+                        size,
+                        className,
+                      })
+                    )}
+                  />
+                ),
+                warning: (
+                  <LockClosed
+                    className={cn(
+                      iconVariants({
+                        size,
+                        className,
+                      })
+                    )}
+                  />
+                ),
+              }[colour]
+            }
+          </div>
+          <div>{children}</div>
+        </div>
+      </Comp>
     );
   }
 );

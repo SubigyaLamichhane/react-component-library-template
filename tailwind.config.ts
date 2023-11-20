@@ -19,12 +19,16 @@ const config: Config = {
       2: "8px",
       3: "12px",
       4: "16px",
+      5: "24px",
     },
     fontFamily: {
       sans: ["Inter", "sans"],
     },
     borderRadius: {
       md: "4px",
+      3: "6px",
+      4: "8px",
+      5: "12px",
     },
     extend: {
       fontSize: {
@@ -101,6 +105,8 @@ const config: Config = {
         bold: "700",
       },
       colors: {
+        text: "#1C2024",
+        darkBackground: "#18181A",
         accents: {
           1: "#FBFDFF",
           2: "#F5FAFF",

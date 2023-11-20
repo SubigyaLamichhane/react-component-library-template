@@ -92,17 +92,20 @@ const buttonVariants = cva(
       {
         variant: "ghost",
         colour: "accents",
-        class: "text-accents-11 hover:bg-accents-5/90 bg-white",
+        class:
+          "text-accents-11 hover:bg-accents-5/90 bg-transparent dark:bg-darkBackground",
       },
       {
         variant: "ghost",
         colour: "error",
-        class: "text-error-11 hover:bg-error-5/90 bg-white",
+        class:
+          "text-error-11 hover:bg-error-5/90 bg-white dark:bg-darkBackground",
       },
       {
         variant: "ghost",
         colour: "neutral",
-        class: "text-neutral-11 hover:bg-neutral-5/90 bg-white",
+        class:
+          "text-neutral-11 hover:bg-neutral-5/90 bg-white dark:bg-darkBackground",
       },
       {
         highContrast: true,

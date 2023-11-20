@@ -8,6 +8,8 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
+    "@storybook/addon-designs",
+    "storybook-dark-mode",
   ],
   framework: {
     name: "@storybook/react-webpack5",

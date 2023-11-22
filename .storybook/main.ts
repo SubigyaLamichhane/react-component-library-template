@@ -9,7 +9,21 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@storybook/addon-designs",
+    "@storybook/addon-docs",
     "storybook-dark-mode",
+    {
+      name: "@storybook/addon-storysource",
+      options: {
+        rule: {
+          test: [/\.codeSnippet\.tsx?$/],
+          include: [path.resolve(__dirname, "../src")], // You can specify directories
+        },
+        loaderOptions: {
+          prettierConfig: { printWidth: 80, singleQuote: false },
+          // injectStoryParameters: false,
+        },
+      },
+    },
   ],
   framework: {
     name: "@storybook/react-webpack5",

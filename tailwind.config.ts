@@ -20,6 +20,8 @@ const config: Config = {
       3: "12px",
       4: "16px",
       5: "24px",
+      6: "32px",
+      7: "40px",
     },
     fontFamily: {
       sans: ["Inter", "sans"],
@@ -29,6 +31,7 @@ const config: Config = {
       3: "6px",
       4: "8px",
       5: "12px",
+      6: "16px",
     },
     extend: {
       fontSize: {
@@ -107,6 +110,7 @@ const config: Config = {
       colors: {
         text: "#1C2024",
         darkBackground: "#18181A",
+        panelDefault: "rgba(255, 255, 255, 0.80)",
         accents: {
           1: "#FBFDFF",
           2: "#F5FAFF",

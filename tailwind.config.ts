@@ -128,7 +128,7 @@ const config: Config = {
         neutral: {
           1: "#FCFCFD",
           2: "#F9F9FB",
-          3: "#F2F2F5",
+          3: "rgba(0, 0, 59, 0.05)",
           4: "#EBEBEF",
           5: "#E4E4E9",
           6: "#DDDDE3",

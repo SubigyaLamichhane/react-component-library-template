@@ -30,10 +30,10 @@ const calloutVariants = cva(
         large: "text-3 p-5 rounded-5",
       },
       colour: {
-        accents: "bg-accents-3 text-text ",
-        error: "bg-error-3 text-text ",
-        success: "bg-success-3 text-text ",
-        warning: "bg-warning-3 text-text ",
+        accents: "bg-accents-3 text-text dark:text-white",
+        error: "bg-error-3 text-text dark:text-white",
+        success: "bg-success-3 text-text dark:text-white",
+        warning: "bg-warning-3 text-text dark:text-white",
       },
     },
     defaultVariants: {
@@ -72,7 +72,7 @@ const Callout = React.forwardRef<HTMLDivElement, CalloutProps>(
         ref={ref}
         {...props}
       >
-        <div className="flex items-center mr-">
+        <div className="flex items-center mr-2 dark:text-white">
           <div>
             {
               {
@@ -84,6 +84,7 @@ const Callout = React.forwardRef<HTMLDivElement, CalloutProps>(
                         className,
                       })
                     )}
+                    stroke="currentColor"
                   />
                 ),
                 error: (

@@ -1,0 +1,16 @@
+{
+  "source": ["tokens.json"],
+  "platforms": {
+    "css": {
+      "transform": "css",
+      "buildPath": "build/css/",
+      "prefix": "sd",
+      "files": [
+        {
+          "destination": "_variables.css",
+          "format": "css/variables"
+        }
+      ]
+    }
+  }
+}

@@ -20,5 +20,3 @@ jobs:
       - run: git config --global user.name "Subigya Lamichhane"
       - run: npm run bump
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: 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

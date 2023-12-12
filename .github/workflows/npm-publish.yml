@@ -20,4 +20,6 @@ jobs:
       - run: git config --global user.name "Subigya Lamichhane"
       - run: npm run bump
       - run: npm publish
-      - run: git push gh-origin HEAD:master --tags
+      - run: git add .
+      - run: git commit -m "Automated changes by GitHub Actions"
+      - run: git push 

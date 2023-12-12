@@ -1,6 +1,6 @@
 {
   "name": "@harness-ui/core",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "description": "Component Library",
   "scripts": {
     "test": "jest",

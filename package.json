@@ -1,6 +1,6 @@
 {
   "name": "@harness-ui/core",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Component Library",
   "scripts": {
     "test": "jest",
@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "generate-variables": "style-dictionary build",
-    "bump": "npm version patch"
+    "bump": "npm version patch --force"
   },
   "author": "Subigya Lamichhane",
   "license": "ISC",

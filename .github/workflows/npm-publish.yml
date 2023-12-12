@@ -16,6 +16,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - run: git config --global user.email "subigya.lamichhane@harness.io".
+      - run:  git config --global user.name "Subigya Lamichhane"
       - run: npm run bump
       - run: npm publish
         env:

@@ -1,14 +1,15 @@
 {
-  "name": "@subigyalamichhane/react-component-library-template",
-  "version": "1.0.2",
-  "description": "A react component library template",
+  "name": "@harness-ui/core",
+  "version": "0.0.1",
+  "description": "Component Library",
   "scripts": {
     "test": "jest",
     "rollup": "rollup -c --bundleConfigAsCjs",
     "watch-css": "npx tailwindcss -c ./tailwind.config.ts -i ./src/styles.css -o ./src/global.css --watch",
     "compile-css": "npx tailwindcss -c ./tailwind.config.ts -i ./src/styles.css -o /src/global.css",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "generate-variables": "style-dictionary build"
   },
   "author": "Subigya Lamichhane",
   "license": "ISC",
@@ -58,7 +59,7 @@
     "storybook": "^7.5.3",
     "storybook-addon-designs": "^6.3.1",
     "storybook-tailwind-dark-mode": "^1.0.22",
-    "style-dictionary": "^3.9.0",
+    "style-dictionary": "^3.9.1",
     "tailwindcss": "^3.3.5",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
@@ -69,9 +70,6 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/subigyalamichhane"
-  },
   "resolutions": {
     "jackspeak": "2.1.1"
   },

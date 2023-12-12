@@ -1,6 +1,6 @@
 {
   "name": "@harness-ui/core",
-  "version": "2.1.0",
+  "version": "0.0.4",
   "description": "Component Library",
   "scripts": {
     "test": "jest",
@@ -9,7 +9,8 @@
     "compile-css": "npx tailwindcss -c ./tailwind.config.ts -i ./src/styles.css -o /src/global.css",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "generate-variables": "style-dictionary build"
+    "generate-variables": "style-dictionary build",
+    "bump": "npm version patch"
   },
   "author": "Subigya Lamichhane",
   "license": "ISC",

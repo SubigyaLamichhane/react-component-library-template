@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm bump
+      - run: npm run bump
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: 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

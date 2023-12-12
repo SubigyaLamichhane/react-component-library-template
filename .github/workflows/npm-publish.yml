@@ -21,4 +21,4 @@ jobs:
       - run: npm run bump
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: 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
+          NODE_AUTH_TOKEN: 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

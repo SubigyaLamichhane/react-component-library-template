@@ -5,7 +5,7 @@ name: Node.js Package
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   publish-npm:
@@ -17,8 +17,8 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: git config --global user.email "subigya.lamichhane@harness.io".
-      - run:  git config --global user.name "Subigya Lamichhane"
+      - run: git config --global user.name "Subigya Lamichhane"
       - run: npm run bump
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: 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
+          NODE_AUTH_TOKEN: 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

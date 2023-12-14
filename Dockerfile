@@ -18,9 +18,6 @@ COPY . .
 RUN npm run generate-variables
 RUN npm run build-storybook
 
-#add .npmrc file to container
-RUN npm publish --access public
-
 # Use an official Nginx image as the base image for serving the app
 FROM nginx:alpine
 

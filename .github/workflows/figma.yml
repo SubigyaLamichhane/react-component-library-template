@@ -20,10 +20,9 @@ jobs:
 
         # Additional steps to configure Git user
       - name: Set up Git User
-        run: |
-        git config user.name "Subigya Lamichhane"
+      run: |
+          git config user.name "Subigya Lamichhane"
           git config user.email "subigyalamichhane@gmail.com"
-
 
       - name: Deploy Workspace Changes 🚀
         uses: stefanzweifel/git-auto-commit-action@v5

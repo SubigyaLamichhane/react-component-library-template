@@ -20,7 +20,7 @@ jobs:
 
         # Additional steps to configure Git user
       - name: Set up Git User
-      run: |
+        run: |
           git config user.name "Subigya Lamichhane"
           git config user.email "subigyalamichhane@gmail.com"
 

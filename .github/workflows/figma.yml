@@ -21,7 +21,8 @@ jobs:
       - name: Deploy Storybooks 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
+          ACCESS_TOKEN: ${{ secrets.GH_SECRET }}
           branch: main
-          folder: fetch-api-data-action
-          target-folder: storybook-static
-          build-script: build-storybook
+          folder: storybook-static
+          build-script: "npm run build-storybook" # The command the action should run to build your storybooks
+

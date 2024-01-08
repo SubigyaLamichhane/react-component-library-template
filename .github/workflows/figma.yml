@@ -18,8 +18,8 @@ jobs:
 
       - name: Build Storybooks 📚
         run: |
-          npm ci
-          npm run build-storybook
+          yarn install --frozen-lockfile
+          yarn run build-storybook
 
       - name: Git add
         run: |

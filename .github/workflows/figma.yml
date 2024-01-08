@@ -1,0 +1,27 @@
+name: Figma Variables Sync
+on:
+  repository_dispatch:
+    # inputs are optional, they may be used to convey contextual data
+    # from the JFrog event to the workflow.
+jobs:
+  refresh-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Fetch API Data 📦
+        uses: JamesIves/fetch-api-data-action@releases/v2
+        with:
+          endpoint: https://subigyalamichhane.com.np/test.json
+          save-name: figma
+
+      - name: Deploy Storybooks 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        with:
+          branch: main
+          folder: fetch-api-data-action
+          target-folder: storybook-static
+          build-script: build-storybook

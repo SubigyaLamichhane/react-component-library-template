@@ -18,11 +18,17 @@ jobs:
           endpoint: https://subigyalamichhane.com.np/test.json
           save-name: figma
 
-      - name: Deploy Storybooks 🚀
+        # Additional steps to configure Git user
+      - name: Set up Git User
+        run: |
+          git config user.name "Subigya Lamichhane"
+          git config user.email "subigyalamichhane@gmail.com"
+
+
+      - name: Deploy Workspace Changes 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          ACCESS_TOKEN: ${{ secrets.GH_SECRET }}
           branch: main
-          folder: storybook-static
-          build-script: "npm run build-storybook" # The command the action should run to build your storybooks
+          folder: fetch-api-data-action
+          target-folder: data
 

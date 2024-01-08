@@ -15,25 +15,26 @@ jobs:
         with:
           endpoint: https://subigyalamichhane.com.np/test.json
           save-name: figma
-      
+
+      - name: Build Storybooks 📚
+        run: |
+          npm ci
+          npm run build-storybook
+
       - name: Git add
-        run: | 
+        run: |
           git add .
 
       - name: Deploy Workspace Changes 🚀
         uses: stefanzweifel/git-auto-commit-action@v5
-        with: 
+        with:
           commit_message: Automated Figma variables fetch
+          token:
           branch: master
           commit_user_name: subigyalamichhane
           commit_user_email: subigyalamichhane@gmail.com
           commit_author: Author <actions@github.com>
-          add_options: '-u'
-          push_options: '--force'
-          skip_dirty_check: true   
-          skip_fetch: true    
-          
-
-
-
-
+          add_options: "-u"
+          push_options: "--force"
+          skip_dirty_check: true
+          skip_fetch: true
